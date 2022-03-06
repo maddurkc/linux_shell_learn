@@ -3,9 +3,9 @@
 ## Table of Contents
 
 - [man](#man)
-- [who](#man)
-- [whoami](#man)
-- [uname](#man)
+- [who](#who)
+- [whoami](#whoami)
+- [uname](#uname)
 
 -----
 
@@ -48,3 +48,21 @@
         - The a option prints all the information
             Ex: 
                 $> uname -a
+
+## pwd
+    >
+        - pwd command to know where you are, It will print the current folder path.
+            Ex: 
+                $> pwd
+
+## basename
+    >
+        - The basename command strips any leading directory and trailing suffix from the name.
+            Ex: 
+                $> basename /usr/local/
+                $> basename /usr/local
+        - The following example shows how to use the basename command inside a bash for loop to rename    all files ending with “.jpeg” in the current directory by replacing the file extension from “.jpeg” to “.jpg”:
+
+                for file in *.jpeg; do
+                    mv -- "$file" "$(basename $file .jpeg).jpg"
+                done
