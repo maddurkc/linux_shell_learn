@@ -4,4 +4,4 @@
 
 **Table of Contents**
 
-- [1.1. Linux Basics](https://github.com/MaddurKrishnaChaitanya/linux_shell/blob/master/00.%20Linux%20Basics/README.md)
+- [1.1. Linux Basics](https://github.com/MaddurKrishnaChaitanya/linux_shell/blob/master/1.1-Linux-Basics/README.md)
