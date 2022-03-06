@@ -1,5 +1,9 @@
 # Basic Commands - Part01
 
+## Command Syntax
+
+> command [options] [arguments]
+
 ## Table of Contents
 
 - [man](#man)
@@ -10,6 +14,7 @@
 - [basename](#basename)
 - [history](#history)
 - [env](#env)
+- [ls](#ls)
 
 -----
 
@@ -90,5 +95,13 @@
             Ex: 
                 $> history | grep uname
 
-## env
-    >
+## ls
+
+    > Inside a folder you can list all the files that the folder contains
+            Ex:
+                $> ls - current location listing
+                $> ls /bin - bin folder listing
+                $> ls -l - long listing
+                $> ls -1 - each file name with new line
+                $> l. - hidden files
+                $> ls -a - display all file names including hidden files 
