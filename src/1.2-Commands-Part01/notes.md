@@ -124,7 +124,8 @@
             Ex:
                 $> mkdir fruits - will create folder in current directory
                 $> mkdir dogs cars - create multiple folders
-                $> mkdir -p fruits/apples - create multiple nested folders
+                $> mkdir -p fruits/apples - create multiple nested folders. it will create fruits and apples(inside fruits) folders
+                $> mkdir fruits/banana - create create banana inside fruits folders. so no need to goto fruits folder and use mkdir
                 $> mkdir ~/fruits - will create folder in user home directory as mentioned
 
 ## cd
@@ -136,14 +137,29 @@
                 $> cd . - nothing happen. it will stay into current folder
                 $> cd /etc - using this absolute path starts from root folder and move into etc folder
                 $> cd ../fruits - it will go one folder back and move to mentioned folder here fruits
+                $> cd ~ or cd  - it will go to user home directory
 
 ## cp
 
     > 
+        - using this command you can copy a file.
+            Ex: 
+                $> cp test.txt test-temp.txt 
+
+        - To copy folders you need to add the -r 
+            Ex:
+                $> cp -r fruits cars  or cp fruits/*  cars
 
 ## mv
 
-    >
+    > 
+        - Using this command once you have a file, you can move it around. You specify the file current path, and its new path:
+            Ex: 
+                $> mv pear new_pear -  The pear file is now moved to new_pear . This is how you rename files and folders.
+
+        - If the last parameter is a folder, the file located at the first parameter path is going to be moved into that folder.
+           Ex:
+                $> mv pear apple fruits -  pear and apple moved to the fruits
 
 ## rm
 
