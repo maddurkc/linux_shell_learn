@@ -10,7 +10,9 @@
 -----
 
 ## man
-
+    > I don't know how to use a command, I type man <command_name> to get manual of the command
+    > Ex:
+        $> man ls
 ## who
 
 ## whoami
