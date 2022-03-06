@@ -138,6 +138,7 @@
                 $> cd /etc - using this absolute path starts from root folder and move into etc folder
                 $> cd ../fruits - it will go one folder back and move to mentioned folder here fruits
                 $> cd ~ or cd  - it will go to user home directory
+                $> cd -   -- it will go to prev directory from where you came
 
 ## cp
 
