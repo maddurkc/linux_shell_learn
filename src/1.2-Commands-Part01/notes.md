@@ -8,6 +8,8 @@
 - [uname](#uname)
 - [pwd](#pwd)
 - [basename](#basename)
+- [history](#history)
+- [env](#env)
 
 -----
 
@@ -53,7 +55,7 @@
 
 ## pwd
     >
-        - pwd command to know where you are, It will print the current folder path.
+        - pwd command to know where you are, It will print the current folder path(full path).
             Ex: 
                 $> pwd
 
@@ -63,6 +65,7 @@
             Ex: 
                 $> basename /usr/local/
                 $> basename /usr/local
+
         - The below example shows how to use the basename command inside a bash for loop to rename   
         all files ending with “.jpeg” in the current directory by replacing the file extension
         from “.jpeg” to “.jpg”:
@@ -70,3 +73,22 @@
                 for file in *.jpeg; do
                     mv -- "$file" "$(basename $file .jpeg).jpg"
                 done
+
+## history
+    >
+        -  inside .bash_history file
+
+        - Every time we run a command, that's memorized in the history, This shows the history with numbers
+            Ex: 
+                $> history
+
+        - The c option is used to clear the history. 
+            Ex: 
+                $> history -c
+
+        - You can combine this with grep to find a command you ran:
+            Ex: 
+                $> history | grep uname
+
+## env
+    >
