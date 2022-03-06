@@ -15,6 +15,11 @@
 - [history](#history)
 - [env](#env)
 - [ls](#ls)
+- [mkdir](#mkdir)
+- [cd](#cd)
+- [cp](#cp)
+- [mv](#mv)
+- [rm](#rm)
 
 -----
 
@@ -105,3 +110,34 @@
                 $> ls -1 - each file name with new line
                 $> l. - hidden files
                 $> ls -a - display all file names including hidden files 
+
+## mkdir
+
+    > You create folders using the mkdir
+            Ex:
+                $> mkdir fruits - will create folder in current directory
+                $> mkdir dogs cars - create multiple folders
+                $> mkdir -p fruits/apples - create multiple nested folders
+                $> mkdir ~/fruits - will create folder in user home directory as mentioned
+
+## cd
+
+    > you can move into a folder. cd means change directory
+            Ex:
+                $> cd fruits - will move into fruits folder
+                $> cd .. - one folder back
+                $> cd . - nothing happen. it will stay into current folder
+                $> cd /etc - using this absolute path starts from root folder and move into etc folder
+                $> cd ../fruits - it will go one folder back and move to mentioned folder here fruits
+
+## cp
+
+    > 
+
+## mv
+
+    >
+
+## rm
+
+    >
