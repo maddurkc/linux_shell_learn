@@ -6,7 +6,7 @@
 
 ## Table of Contents
 
-- [man](#man)
+<!-- - [man](#man)
 - [who](#who)
 - [whoami](#whoami)
 - [uname](#uname)
@@ -19,9 +19,11 @@
 - [cd](#cd)
 - [cp](#cp)
 - [mv](#mv)
-- [rm](#rm)
+- [rm](#rm) -->
 
-| [man](#man) | [who](#who) | [whoami](#whoami) | [uname](#uname) | [pwd](#pwd) | [basename](#basename) |
+| <!-- -->    | <!-- -->    | <!-- -->          | <!-- -->        | <!-- -->    | <!-- -->              |
+|  :---:      |  :---: |:---: |:---: |:---: |:---: |
+| [`man`](#man) | [`who`](#who) | [whoami](#whoami) | [uname](#uname) | [pwd](#pwd) | [basename](#basename)|
 | [history](#history) | [env](#env) | [ls](#ls) | [mkdir](#mkdir) | [cd](#cd) | [cp](#cp) |
 | [mv](#mv) | [rm](#rm) |
 
