@@ -63,9 +63,9 @@
             Ex: 
                 $> basename /usr/local/
                 $> basename /usr/local
-        - The below example shows how to use the basename command inside a bash for loop to rename<br/>   
-        all files ending with “.jpeg” in the current directory by replacing the file extension<br />
-        from “.jpeg” to “.jpg”:<br />
+        - The below example shows how to use the basename command inside a bash for loop to rename   
+        all files ending with “.jpeg” in the current directory by replacing the file extension
+        from “.jpeg” to “.jpg”:
 
                 for file in *.jpeg; do
                     mv -- "$file" "$(basename $file .jpeg).jpg"
