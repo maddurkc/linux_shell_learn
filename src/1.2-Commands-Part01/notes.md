@@ -6,6 +6,8 @@
 - [who](#who)
 - [whoami](#whoami)
 - [uname](#uname)
+- [pwd](#pwd)
+- [basename](#basename)
 
 -----
 
