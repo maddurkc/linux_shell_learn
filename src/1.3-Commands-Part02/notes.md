@@ -108,18 +108,27 @@
 
 | Symbol | Type           |
 | :---:  | :---:          |
-|   -    |  Regular file  |
-|   d    |  Directory     |
-|   l    |  Synbolic Link |
+|   -    |  regular file  |
+|   d    |  directory     |
+|   l    |  symbolic link |
 
 | Symbol | Permission     |
 | :---:  | :---:          |
-|   r    |  Read          |
-|   w    |  Write         |
-|   x    |  Execute       |
+|   r    |  read          |
+|   w    |  write         |
+|   x    |  execute       |
 
-| Permission    | File                                  |  Directory                                        |
-| :---          | :---                                  |  :---                                             |
-|  Read(r)      |  allows a file to be read             |  allows file names in the dir to be read          |
-|  Write(w)     |  allows a file to be modify/update    |  allows entries to be modified with in the dir    |
-|  Execute(x)   |  allow execution of a file            |  allows access to contents and metadat for entries|
+| Permission | File                                                                    |  Directory                                         |
+| :---       | :---                                                                    |  :---                                              |
+|  Read(r)   |grants the right to read the contents of the file                        |ability to list all the files in the directory      |
+|  Write(w)  |ability to change the contents of the file                               |create new files in the directory                   |
+|  Execute(x)|right to execute them, if they are programs<br />(Files that are not programs should not be given the execute permission.)                           |execute permission allows you to enter the directory|
+
+| Symbol | Category       |
+| :---:  | :---:          |
+|   u    |  user          |
+|   g    |  group         |
+|   o    |  execute       |
+|   a    |  all           |
+
+![file_directory_per](../../assets/img/file_directory_per.PNG)
