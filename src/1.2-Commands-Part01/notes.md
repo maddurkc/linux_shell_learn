@@ -6,27 +6,7 @@
 
 ## Table of Contents
 
-<!-- - [man](#man)
-- [who](#who)
-- [whoami](#whoami)
-- [uname](#uname)
-- [pwd](#pwd)
-- [basename](#basename)
-- [history](#history)
-- [env](#env)
-- [ls](#ls)
-- [mkdir](#mkdir)
-- [cd](#cd)
-- [cp](#cp)
-- [mv](#mv)
-- [rm](#rm) -->
-
-<!-- |     |     |           |         |     |               |
-|  :---:      |  :---: |:---: |:---: |:---: |:---: |
-| [`man`](#man) | [`who`](#who) | [`whoami`](#whoami) | [`uname`](#uname) | [`pwd`](#pwd) | [`basename`](#basename)| [`history`](#history) | [`env`](#env) | [`ls`](#ls) |
-| [`mkdir`](#mkdir) | [`cd`](#cd) | [`cp`](#cp) | [`mv`](#mv) | [`rm`](#rm) | -->
-
-| [`man`](#man) | [`who`](#who) | [`whoami`](#whoami) | [`uname`](#uname) | [`pwd`](#pwd) | [`basename`](#basename)| [`history`](#history) | [`env`](#env) | [`ls`](#ls) | [`mkdir`](#mkdir) | [`cd`](#cd) | [`cp`](#cp) | [`mv`](#mv) | [`rm`](#rm) |
+| [`man`](#man) | [`who`](#who) | [`whoami`](#whoami) | [`uname`](#uname) | [`pwd`](#pwd) | [`basename`](#basename)| [`history`](#history) |  [`ls`](#ls) | [`mkdir`](#mkdir) | [`cd`](#cd) | [`cp`](#cp) | [`mv`](#mv) | [`rm`](#rm) |
 
 -----
 
