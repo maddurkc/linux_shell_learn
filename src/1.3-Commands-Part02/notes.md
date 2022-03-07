@@ -6,7 +6,7 @@
 
 ## Table of Contents
 
-| [`shellprompt`](#shellprompt) | [`aliases`](#aliases) | [`env`](#env) |
+| [`shellprompt`](#shellprompt) | [`aliases`](#aliases) | [`env`](#env) | [`fadp`](#fadp)
 
 -----
 
@@ -31,7 +31,7 @@
                             [18:25:04 iamadmin@localhost ~>]$ 
                             [18:25:25 iamadmin@localhost /var/log>] - if we are in /var/log folder
 
-            - to make persist permanently(use any editor to edit, iam using vi) after that run source ~/.bash_profile to reload profile
+            - to make persist permanently(use any editor to edit, iam using vi) after that run source ~/.bash_profile or . ~/.bash_profile to reload profile
                 Ex:
                     $> vi .bash_profile and insert below line and save and close
                         PS1="[\t \u@\h \w>]\$" 
@@ -64,7 +64,7 @@
          ### Persisting Aliases
             - add aliases to your personal initialization files(.bash_profile)
 
-            Ex:- vi ~/.bash_profile and insert below lines after that run source ~/.bash_profile to reload profile
+            Ex:- vi ~/.bash_profile and insert below lines after that run source ~/.bash_profile or . ~/.bash_profile to reload profile
                 alias lltr="ls -ltr"
                 alias cls="clear"
 
@@ -93,5 +93,33 @@
         ### Persisting environment varible
             - add environment variabled to your personal initialization files(.bash_profile)
 
-            Ex:- vi ~/.bash_profile and insert below lines after that run source ~/.bash_profile to reload profile
+            Ex:- vi ~/.bash_profile and insert below lines after that run source ~/.bash_profile or . ~/.bash_profile to reload profile
                  export EDITOR = "vi"
+
+## fadp
+
+### File and Directory Permission
+
+>
+        $> ls -l
+
+            drwxrwxr-x. 2 iamadmin iamadmin 43 Mar  6 16:43 fruits
+            -rw-rw-r--. 1 iamadmin iamadmin  0 Mar  7 21:15 test.txt 
+
+| Symbol | Type           |
+| :---:  | :---:          |
+|   -    |  Regular file  |
+|   d    |  Directory     |
+|   l    |  Synbolic Link |
+
+| Symbol | Permission     |
+| :---:  | :---:          |
+|   r    |  Read          |
+|   w    |  Write         |
+|   x    |  Execute       |
+
+| Permission    | File                                  |  Directory                                        |
+| :---          | :---                                  |  :---                                             |
+|  Read(r)      |  allows a file to be read             |  allows file names in the dir to be read          |
+|  Write(w)     |  allows a file to be modify/update    |  allows entries to be modified with in the dir    |
+|  Execute(x)   |  allow execution of a file            |  allows access to contents and metadat for entries|
