@@ -9,3 +9,5 @@
 - [`1.1. Linux Basics`](src/1.1-Linux-Basics/notes.md)
 
 - [`1.2. Commands-Part01`](src/1.2-Commands-Part01/notes.md)
+
+- [`1.3. Commands-Part02`](src/1.3-Commands-Part02/notes.md)
