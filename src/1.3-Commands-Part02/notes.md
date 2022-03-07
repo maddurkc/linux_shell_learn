@@ -134,7 +134,7 @@
 ![file_directory_per](../../assets/img/file_directory_per.PNG)
 
 | Item   | Meaning                          |
-| :---   | :---                            |
+| :---   | :---                             |
 | chmod  |  change mode command             |
 | ugoa   |  category(user, group,other,all) |
 | +-=    |  add,subtract,set permission     |
@@ -149,6 +149,7 @@
         $> chmod a=r test.txt - user,group,other set to read permission
         $> chmod u=rwx,g=rx,o= test.txt -user(read,write,execute),group(read,execute),other(no permission)
 
+### Numeric Based Permission
 
 | r       | w      | x    | Meaning                 |
 | :---:   | :---:  |:---: | :---                    |
@@ -156,9 +157,20 @@
 | 1       |  1     | 1    | binary value for on     |
 | 4       |  2     | 1    | base 10 value for on    |
 
+### stick to order
 
 |           |    U     |     G   |    O   |
 | :----     |  :-----: |  :----: | :----: |
 | Symbolic  |  rwx     |   r-x   | r--    |
 | Binary    |  111     |   101   | 100    |
 | Decimal   |   7      |    5    |  4     |
+
+### Commonly Used Permission
+
+| Symbolic          | Octal |
+| :---              | :---  |
+| rwx------         |  700  |
+| rwxr-xr-x         |  755  |
+| rw-rw-r--         |  664  |
+| rw-rw----         |  660  |
+| rw-r--r--         |  644  |
