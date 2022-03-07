@@ -132,3 +132,33 @@
 |   a    |  all           |
 
 ![file_directory_per](../../assets/img/file_directory_per.PNG)
+
+| Item   | Meaning                          |
+| :---   | :---                            |
+| chmod  |  change mode command             |
+| ugoa   |  category(user, group,other,all) |
+| +-=    |  add,subtract,set permission     |
+| rwx    |  read,write,execute              |
+
+> 
+    Ex:
+        $> chmod g+w test.txt - add write permission to group category
+        $> chmod g-w test.txt - remove write permission to group category
+        $> chmod g+wx test.txt - add write and execute permission to group category
+        $> chmod u+rwx,g-x test.txt - add r,w,x to user and remove execute to group 
+        $> chmod a=r test.txt - user,group,other set to read permission
+        $> chmod u=rwx,g=rx,o= test.txt -user(read,write,execute),group(read,execute),other(no permission)
+
+
+| r       | w      | x    | Meaning                 |
+| :---:   | :---:  |:---: | :---                    |
+| 0       |  0     | 0    | value for off           |
+| 1       |  1     | 1    | binary value for on     |
+| 4       |  2     | 1    | base 10 value for on    |
+
+
+|           |    U     |     G   |    O   |
+| :----     |  :-----: |  :----: | :----: |
+| Symbolic  |  rwx     |   r-x   | r--    |
+| Binary    |  111     |   101   | 100    |
+| Decimal   |   7      |    5    |  4     |
