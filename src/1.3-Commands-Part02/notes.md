@@ -6,7 +6,7 @@
 
 ## Table of Contents
 
-| [`shellprompt`](#shellprompt) | [`aliases`](#aliases) | [`env`](#env) | [`chmod`](#chmod)
+| [`shellprompt`](#shellprompt) | [`aliases`](#aliases) | [`env`](#env) | [`chmod`](#chmod) | [`chown`](#chown) | [`acl`](#acl) |
 
 -----
 
@@ -107,7 +107,7 @@
 |   r    |  read          |
 |   w    |  write         |
 |   x    |  execute       |
-    
+
     each permission(rwx) can be controlled at three levels/categories
 
 | Symbol | Category                             |
@@ -116,7 +116,7 @@
 |   g    |  group                               |
 |   o    |  other(everyone on the system)       |
 |   a    |  all                                 |
-    
+
     - run below command to get permission of File or Directory
         Ex:
 
@@ -124,11 +124,11 @@
             drwxrwxr-x. 2 iamadmin iamadmin 43 Mar  6 16:43 fruits
             -rw-rw-r--. 1 iamadmin iamadmin  0 Mar  7 21:15 test.txt 
 
-            | Symbol | Type           |
-            | :---:  | :---:          |
-            |   -    |  regular file  |
-            |   d    |  directory     |
-            |   l    |  symbolic link |
+| Symbol | Type           |
+| :---:  | :---:          |
+|   -    |  regular file  |
+|   d    |  directory     |
+|   l    |  symbolic link |
 
 ![file_directory_per](../../assets/img/file_directory_per.PNG)
 
@@ -188,3 +188,72 @@
     $> chmod 764 test.txt
 
 ![file_directory_per](../../assets/img/file_directory_per_numeric.PNG)
+
+## chown
+
+### File and Directory Ownership
+
+>
+    - There are 2 owners of a file and directory
+        user and group
+    
+    - command to change file ownership
+         chown - changes the ownership of a file 
+         chgrp - changes the group ownership of a file
+    
+    - recursive option using  -R 
+
+    - to use chown, you need to have sudo/root permission.
+
+![file_directory_per](../../assets/img/file_directory_ownership.PNG)
+
+>
+    - changing ownership(user) of a file/directory
+        Ex:
+            $> chown root mylocal - it will change user from iamadmin to root user.
+            Before : drw-------. 4 iamadmin iamadmin 48 Mar  7 21:15 mylocal 
+            After  : drw-------. 4 root     iamadmin 48 Mar  7 21:15 mylocal
+
+    - changing ownership(group) of a file/directory
+        Ex:
+            $> chgrp root mylocal - it will change group from iamadmin to root.
+            Before : drwx------. 4 root     iamadmin 48 Mar  7 21:15 mylocal
+            After  : drwx------. 4 root     root     48 Mar  7 21:15 mylocal
+
+## acl
+
+### Access Control List
+
+>
+
+    - additional, more flexiable permission mechanism for file systems.
+    - allows you to give permission for any user or group to any disc resource.
+    - more fine-grained access rights for files and directories.
+    - commands to assign and remove ACL permissions are: `setfacl` and `getfacl`
+    - As you assign the ACL permission to a file/directory it adds + sign at the end of the permission
+
+    - usecase
+    user is not a member of group created by you but still you want to give some read or write access, how can you do it <br/>
+    without making user a member of group.
+
+    - to add permission for user
+        Ex:
+            $> setfacl -m u:<<username>>:rwx <<path to file>>
+
+    - to add permission for group
+        Ex:
+            $> setfacl -m g:<<username>>:rw <<path to file>>
+
+    - to allow all files and directories to inherit from directory it is within
+        Ex:
+            $> setfacl -Rm <<entry>> <<path to file>> 
+                    <<entry>> - user/group permission entry
+    
+    - to remove a specific entry
+         Ex:
+            $> setfacl -x u:<<username>> <<path to file>> (for a specific user)
+            $> setfacl -b  <<path to file>> (for all user)
+
+        
+
+
