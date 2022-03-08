@@ -254,6 +254,11 @@
             $> setfacl -x u:<<username>> <<path to file>> (for a specific user)
             $> setfacl -b  <<path to file>> (for all user)
 
+    - to get more details abt file/directory
+        Ex:
+            $> getfacl <<path to file>>
+
+
         
 
 

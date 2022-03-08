@@ -6,9 +6,23 @@
 
 ## Table of Contents
 
-| [`man`](#man) | [`who`](#who) | [`whoami`](#whoami) | [`uname`](#uname) | [`pwd`](#pwd) | [`basename`](#basename)| [`history`](#history) |  [`ls`](#ls) | [`mkdir`](#mkdir) | [`cd`](#cd) | [`cp`](#cp) | [`mv`](#mv) | [`rm`](#rm) |
+|  [`help`](#help)  | [`man`](#man) |  [`who`](#who) | [`whoami`](#whoami) | [`uname`](#uname) |
+[`pwd`](#pwd) | [`basename`](#basename)| [`history`](#history) |  [`ls`](#ls) | [`mkdir`](#mkdir) |
+[`cd`](#cd) | [`cp`](#cp) | [`mv`](#mv) | [`rm`](#rm) |
 
 -----
+
+## help
+
+    >  there are 3 types of help commands
+        - whatis command  - give you quicker/shoter info abt command
+        - command --help  - little more details 
+        - man command     - complete list of command information
+
+        Ex:
+            $> whatis ls
+            $> ls --help
+            $> man ls
 
 ## man
     > 
