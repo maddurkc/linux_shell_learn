@@ -140,7 +140,7 @@
 |  Write(w)  |ability to change the contents of the file                               |create new files in the directory                   |
 |  Execute(x)|right to execute them, if they are programs<br />(Files that are not programs should not be given the execute permission)                                                                            |allows you to enter the directory(cd)               |
 
-### command to change permission
+### assign permission using letters
 
 | Item   | Meaning                          |
 | :---   | :---                             |
@@ -158,7 +158,7 @@
         $> chmod a=r test.txt - user,group,other set to read permission
         $> chmod u=rwx,g=rx,o= test.txt -user(read,write,execute),group(read,execute),other(no permission)
 
-### Numeric Based Permission
+### assign permission using Numeric Mode
 
 | r       | w      | x    | Meaning                 |
 | :---:   | :---:  |:---: | :---                    |
@@ -183,3 +183,8 @@
 | rw-rw-r--         |  664  |
 | rw-rw----         |  660  |
 | rw-r--r--         |  644  |
+
+> 
+    $> chmod 764 test.txt
+     
+       ![file_directory_per](../../assets/img/file_directory_per_numeric.PNG)
