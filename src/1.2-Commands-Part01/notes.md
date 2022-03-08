@@ -238,16 +238,16 @@ it will delete file/directories in source path and move to destination path like
 - you cannot create soft or hard link within the same directory with the same name.
 - `hard links` only work within the same partition, other wise will get error `Invalid cross-device link`
 
-![file_directory_per](../../assets/img/ln.PNG)
+![file_directory_per](../../assets/img/ln.png)
 
     >
         Ex:
             $> ln     = to create hard link
 
-![file_directory_per](../../assets/img/hardlink.PNG)
+![file_directory_per](../../assets/img/hardlink.png)
 
             $> ln -S  = to create soft link
-![file_directory_per](../../assets/img/softlink.PNG)
+![file_directory_per](../../assets/img/softlink.png)
 
 ## redirections
 
@@ -296,7 +296,7 @@ it will delete file/directories in source path and move to destination path like
 >
     - is used to store and view the output of any command(both at same time)
 
-![file_directory_per](../../assets/img/tee.PNG)
+![file_directory_per](../../assets/img/tee.png)
 
      Ex:
           $> echo "Hello World1" | tee helloworld.txt - override or create the content

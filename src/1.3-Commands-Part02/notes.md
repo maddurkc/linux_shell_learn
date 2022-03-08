@@ -134,7 +134,7 @@
 |   p    |  Named pipe |
 |   b    |  Block device |
 
-![file_directory_per](../../assets/img/file_directory_per.PNG)
+![file_directory_per](../../assets/img/file_directory_per.png)
 
 ### permission on File and Directory
 
@@ -191,7 +191,7 @@
 >
     $> chmod 764 test.txt
 
-![file_directory_per](../../assets/img/file_directory_per_numeric.PNG)
+![file_directory_per](../../assets/img/file_directory_per_numeric.png)
 
 ## chown
 
@@ -209,7 +209,7 @@
 
     - to use chown, you need to have sudo/root permission.
 
-![file_directory_per](../../assets/img/file_directory_ownership.PNG)
+![file_directory_per](../../assets/img/file_directory_ownership.png)
 
 >
     - changing ownership(user) of a file/directory
