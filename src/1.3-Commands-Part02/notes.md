@@ -130,9 +130,9 @@
             |   d    |  directory     |
             |   l    |  symbolic link |
 
-            ![file_directory_per](../../assets/img/file_directory_per.PNG)
+![file_directory_per](../../assets/img/file_directory_per.PNG)
 
-### permission on File and Directory            
+### permission on File and Directory
 
 | Permission | File                                                                    |  Directory                                         |
 | :---       | :---                                                                    |  :---                                              |
@@ -149,7 +149,7 @@
 | +-=    |  add,subtract,set permission     |
 | rwx    |  read,write,execute              |
 
-> 
+>
     Ex:
         $> chmod g+w test.txt - add write permission to group category
         $> chmod g-w test.txt - remove write permission to group category
@@ -184,7 +184,7 @@
 | rw-rw----         |  660  |
 | rw-r--r--         |  644  |
 
-> 
+>
     $> chmod 764 test.txt
-     
-       ![file_directory_per](../../assets/img/file_directory_per_numeric.PNG)
+
+![file_directory_per](../../assets/img/file_directory_per_numeric.PNG)
