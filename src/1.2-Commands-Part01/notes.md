@@ -135,9 +135,9 @@
 
 ## cp
 
-    >  
 it will copy file/directories in source path and to destination path like `copy and paste`
 
+    >
         - you can create a file with same content of file
         - using this command you can copy a file.
             Ex: 
@@ -149,8 +149,9 @@ it will copy file/directories in source path and to destination path like `copy 
 
 ## mv
 
-    >   
 it will delete file/directories in source path and move to destination path like `cut and paste`
+
+    >
 
         - Using this command once you have a file, you can move it around. You specify the file current path, and its new path:
             Ex: 
