@@ -237,6 +237,7 @@ it will delete file/directories in source path and move to destination path like
 - `hard link` = deleting,renaming or moving the original file will not affect hard link
 - you cannot create soft or hard link within the same directory with the same name.
 - `hard links` only work within the same partition, other wise will get error `Invalid cross-device link`
+
 ![file_directory_per](../../assets/img/ln.PNG)
 
     >
@@ -247,5 +248,3 @@ it will delete file/directories in source path and move to destination path like
 
             $> ln -S  = to create soft link
 ![file_directory_per](../../assets/img/softlink.PNG)
-
-
