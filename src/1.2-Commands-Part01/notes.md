@@ -337,13 +337,62 @@ it will copy file/directories in source path and to destination path like `copy 
 
 >
 
+    - cat displays the file content but output will scroll off your screen
+    
+        Ex:
+            $> cat hulk - print hulk file content into stdout
+            $> cat helloworld.txt hulk - print the content of multiple files into stdout
+            $> cat test.txt hulk > mergefile - using >  you can concatenate the content of multiple files into a new file
+            $> cat test.txt hulk >> newfile - Using >> you can append the content of multiple files into a new file, creating it if it does not exist
+            $> cat -n hulk - print hulk file content along with line numbers into stdout
+`Note:-`
+        - you can only add a number to non-blank lines using -b
+        - you can also remove all the multiple empty lines using -s
+        - cat is often used in combination with the pipe operator | to feed a file content as input to another command
+          Ex:
+                $> cat file1 | anothercommand
+
 ## more
 
 >
+    - command also displays the content of a file but displays output one screenful at a time.
+
+`Syntax:-`
+            more <<file_name>>
+`Example:-`
+            more /var/log/messages
+
+### keys used to scroll the page
+
+| Key    | Meaning                              |
+| :---:  | :---                                 |
+| Enter  |  to scroll down page line by line    |
+| Space  |  to go to next page                  |
+|  b     |  to go to the backward page          |
+|  /     |  lets you search the string          |
+
+### more options
+
+| Options            | Function                                             |
+| :---               | :---                                                 |
+| more -num          |  Limits the line displayed per page.                 |
+| more -d            |  Displays user message at right corner.              |
+| more -s            |  Squeeze blank lines.                                |
+| more +/string name |  It helps to find the string.                        |
+| more +num name     |  Used to display the content from a specific line.   |
+
+`Note:-` The 'more' command can't be used to display binary files.
 
 ## less
 
 >
+    - The 'less' command is same as 'more' command but include some more features.
+    - It automatically adjust with the width and height of the teminal window, while 'more' command cuts the content as the width of the terminal window get shorter.
+
+`Syntax:-`
+            less <<file_name>>
+`Example:-`
+            less /var/log/messages
 
 ## head
 
