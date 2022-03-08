@@ -135,7 +135,10 @@
 
 ## cp
 
-    >   - you can create a file with same content of file
+    >  
+it will copy file/directories in source path and to destination path like `copy and paste`
+
+        - you can create a file with same content of file
         - using this command you can copy a file.
             Ex: 
                 $> cp test.txt test-temp.txt 
@@ -146,7 +149,9 @@
 
 ## mv
 
-    > 
+    >   
+it will delete file/directories in source path and move to destination path like `cut and paste`
+
         - Using this command once you have a file, you can move it around. You specify the file current path, and its new path:
             Ex: 
                 $> mv pear new_pear -  The pear file is now moved to new_pear . This is how you rename files and folders.
