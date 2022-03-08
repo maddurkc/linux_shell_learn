@@ -173,6 +173,7 @@
 
     >
         - use to find files/directories
+        - find in specific directory.
         Syntax: find <<directory_path>> -name "<<file_name>>"
         Ex:
             $> find . -name "test.txt" - list of paths(text.txt) in current directory
@@ -181,6 +182,7 @@
 
     >
         - use to find files/directories
+        - find in globally. we dont know in which directory we need to find.
         Syntax: locate  <<file_name>>
         Ex:
             $> locate test.txt - list of paths(text.txt) in all directories
