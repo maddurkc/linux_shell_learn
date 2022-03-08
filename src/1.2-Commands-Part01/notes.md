@@ -8,7 +8,7 @@
 
 |  [`help`](#help)  | [`man`](#man) |  [`who`](#who) | [`whoami`](#whoami) | [`uname`](#uname) |
 [`pwd`](#pwd) | [`basename`](#basename)| [`history`](#history) |  [`ls`](#ls) | [`cd`](#cd) |
-[`touch`](#touch) | [`cp`](#cp) | [`mv`](#mv) | [`mkdir`](#mkdir) | [`rm`](#rm) | [`find`](#find) | [`locate`](#locate) |
+[`touch`](#touch) | [`cp`](#cp) | [`mv`](#mv) | [`mkdir`](#mkdir) | [`rm`](#rm) | [`find`](#find) | [`locate`](#locate) | [`passwd`](#passwd) | [`wildcards`](#wildcards) | [`ln`](#ln) |
 
 -----
 
@@ -199,3 +199,50 @@ it will delete file/directories in source path and move to destination path like
         - make sure you have `mlocate` package installed <br/>
             to check = `rpm -qa | grep mlocate` <br/>
             to install = `yum install mlocate` <br/>
+
+### Difference between find and locate commands
+
+- `locate` uses a prebuilt database, which should regularly updated
+- `find` iterates over a filesystem to locate files
+- `locate` is much faster than `find` but can be inaccurate if the database is not udated
+- to update locate database run `updatedb`
+
+## passwd
+
+    >   
+        - you should create/change password
+        - you should login as a root to change user password
+        Syntax: passwd  <<userid>>
+        Ex:
+            $> passwd iamadmin
+
+## wildcards
+
+    >   
+      - wildcard is a charecter that can be used as a substitute for any of a class of charecters in a search
+
+| Symbol | Meaning                   |
+| :---:  | :---                      |
+|   *    |  zero or more charecters  |
+|   ?    |  single charecter         |
+|  []    |  range of charecters      |
+|  \     |  an escape charecter      |
+|  ^     |  the beginning of the line      |
+|  $     |  end of the line      |
+
+## ln
+
+- `inode` = pointer or number of a file on the hard disk. to see inode of file/directory use: ls -ltri
+- `soft link` = link will be removed if file is removed or renamed
+- `hard link` = deleting,renaming or moving the original file will not affect hard link
+- you cannot create soft or hard link within the same directory with the same name.
+- `hard links` only work within the same partition, other wise will get error `Invalid cross-device link`
+    >
+        Ex:
+            $> ln     = to create hard link
+            $> ln -S  = to create soft link
+
+![file_directory_per](../../assets/img/ln.PNG)
+
+
+
