@@ -100,22 +100,22 @@
 
 ### File and Directory Permission
 
-    - there are 3 types of permissions
+    there are 3 types of permissions
 
-        | Symbol | Permission     |
-        | :---:  | :---:          |
-        |   r    |  read          |
-        |   w    |  write         |
-        |   x    |  execute       |
+| Symbol | Permission     |
+| :---:  | :---:          |
+|   r    |  read          |
+|   w    |  write         |
+|   x    |  execute       |
     
-    - each permission(rwx) can be controlled at three levels/categories
+    each permission(rwx) can be controlled at three levels/categories
 
-        | Symbol | Category                             |
-        | :---:  | :---                               |
-        |   u    |  user                                |
-        |   g    |  group                               |
-        |   o    |  other(everyone on the system)       |
-        |   a    |  all                                 |
+| Symbol | Category                             |
+| :---:  | :---                               |
+|   u    |  user                                |
+|   g    |  group                               |
+|   o    |  other(everyone on the system)       |
+|   a    |  all                                 |
     
     - run below command to get permission of File or Directory
         Ex:
