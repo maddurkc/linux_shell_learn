@@ -185,7 +185,7 @@
         Ex:
             $> locate test.txt - list of paths(text.txt) in all directories
 
-`Note`: 
+`Note`:<br/>
         - if "locate" command does not output any result, then as root run `udatedb`<br/>
         - make sure you have `mlocate` package installed <br/>
             to check = `rpm -qa | grep mlocate` <br/>
