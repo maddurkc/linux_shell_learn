@@ -8,7 +8,7 @@
 
 |  [`help`](#help)  | [`man`](#man) |  [`who`](#who) | [`whoami`](#whoami) | [`uname`](#uname) |
 [`pwd`](#pwd) | [`basename`](#basename)| [`history`](#history) |  [`ls`](#ls) | [`cd`](#cd) |
-[`touch`](#touch) | [`cp`](#cp) | [`mv`](#mv) | [`mkdir`](#mkdir) | [`rm`](#rm) | [`find`](#find) | [`locate`](#locate) | [`passwd`](#passwd) | [`wildcards`](#wildcards) | [`ln`](#ln) |
+[`touch`](#touch) | [`cp`](#cp) | [`mv`](#mv) | [`mkdir`](#mkdir) | [`rm`](#rm) | [`find`](#find) | [`locate`](#locate) | [`passwd`](#passwd) | [`wildcards`](#wildcards) | [`ln`](#ln) | [`redirections`](#redirections) | [`tee`](#tee) |
 
 -----
 
@@ -248,3 +248,56 @@ it will delete file/directories in source path and move to destination path like
 
             $> ln -S  = to create soft link
 ![file_directory_per](../../assets/img/softlink.PNG)
+
+## redirections
+
+>
+    - 3 simple nways to add text to a file
+        - vi
+        - redirect command output > or >>
+        - echo > or >>
+        
+            Ex:
+                $> echo "acbc1-xyz" > acbc1-xyz - override the content in acbc1-xyz
+                $> echo "acbc1-xyz appended" >> acbc1-xyz - append the content in acbc1-xyz
+
+    - 3 redirects in linux
+        - standard input(stdin) and it has file descriptor number as 0
+        - standard output(stdout) and it has file descriptor number as 1
+        - standard error(stderr) and it has file descriptor number as 2
+
+### output(stdout) -1
+
+        - by default when running command its output goes to the terminal
+        - output of a command can be routed to a file using > symbol
+            Ex:
+                $> ls -l > listingoffiles.txt
+                $> pwd > presentworkingdir.txt  
+        - if using the same file for additional output or to append to the same file then use >> 
+            Ex:
+                $> ls -ltr >>  listingoffiles.txt
+                $> echo "hello" >>   presentworkingdir.txt          
+
+### input(stdin) - 0
+
+        - input is used when feeding file contents to a file
+            Ex:
+                $> cat < listings
+
+### Error(stderr) - 2
+
+        - if command produced any error on the screen then it is considerd as  stderr-2
+            Ex:
+                ls -l /root 2> errorfile
+                telnet localhost 2> errorfile
+
+## tee
+
+>
+    - is used to store and view the output of any command(both at same time)
+
+![file_directory_per](../../assets/img/tee.PNG)
+
+     Ex:
+          $> echo "Hello World1" | tee helloworld.txt - override or create the content
+          $> echo "Hello World1" | tee -a helloworld.txt - appends the content
