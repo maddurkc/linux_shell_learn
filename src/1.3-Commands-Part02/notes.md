@@ -129,6 +129,10 @@
 |   -    |  regular file  |
 |   d    |  directory     |
 |   l    |  symbolic link |
+|   c    |  special file or device file |
+|   s    |  socket |
+|   p    |  Named pipe |
+|   b    |  Block device |
 
 ![file_directory_per](../../assets/img/file_directory_per.PNG)
 

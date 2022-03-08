@@ -7,8 +7,8 @@
 ## Table of Contents
 
 |  [`help`](#help)  | [`man`](#man) |  [`who`](#who) | [`whoami`](#whoami) | [`uname`](#uname) |
-[`pwd`](#pwd) | [`basename`](#basename)| [`history`](#history) |  [`ls`](#ls) | [`mkdir`](#mkdir) |
-[`cd`](#cd) | [`cp`](#cp) | [`mv`](#mv) | [`rm`](#rm) |
+[`pwd`](#pwd) | [`basename`](#basename)| [`history`](#history) |  [`ls`](#ls) | [`cd`](#cd) |
+[`touch`](#touch) | [`cp`](#cp) | [`mv`](#mv) | [`mkdir`](#mkdir) | [`rm`](#rm) | [`find`](#find) | [`locate`](#locate) |
 
 -----
 
@@ -112,16 +112,6 @@
                 $> l. - hidden files
                 $> ls -a - display all file names including hidden files 
 
-## mkdir
-
-    > You create folders using the mkdir
-            Ex:
-                $> mkdir fruits - will create folder in current directory
-                $> mkdir dogs cars - create multiple folders
-                $> mkdir -p fruits/apples - create multiple nested folders. it will create fruits and apples(inside fruits) folders
-                $> mkdir fruits/banana - create create banana inside fruits folders. so no need to goto fruits folder and use mkdir
-                $> mkdir ~/fruits - will create folder in user home directory as mentioned
-
 ## cd
 
     > you can move into a folder. cd means change directory
@@ -134,16 +124,25 @@
                 $> cd ~ or cd  - it will go to user home directory
                 $> cd -   -- it will go to prev directory from where you came
 
+## touch
+
+    >
+       - creating empty file
+          Ex:
+               $> touch test.txt - creates empty file.
+               $> touch test1.txt test2.txt - creates multiple empty files 
+        - If the file already exists, it opens the file in write mode and the timestamp of the file is updated.   
+
 ## cp
 
-    > 
+    >   - you can create a file with same content of file
         - using this command you can copy a file.
             Ex: 
                 $> cp test.txt test-temp.txt 
 
-        - To copy folders you need to add the -r 
+        - To copy folders you need to add the -R
             Ex:
-                $> cp -r fruits cars  or cp fruits/*  cars
+                $> cp -R fruits cars
 
 ## mv
 
@@ -156,6 +155,38 @@
            Ex:
                 $> mv pear apple fruits -  pear and apple moved to the fruits
 
+## mkdir
+
+    > You create folders using the mkdir
+            Ex:
+                $> mkdir fruits - will create folder in current directory
+                $> mkdir dogs cars - create multiple folders
+                $> mkdir -p fruits/apples - create multiple nested folders. it will create fruits and apples(inside fruits) folders
+                $> mkdir fruits/banana - create create banana inside fruits folders. so no need to goto fruits folder and use mkdir
+                $> mkdir ~/fruits - will create folder in user home directory as mentioned
+
 ## rm
 
     >
+
+## find
+
+    >
+        - use to find files/directories
+        Syntax: find <<directory_path>> -name "<<file_name>>"
+        Ex:
+            $> find . -name "test.txt" - list of paths(text.txt) in current directory
+
+## locate
+
+    >
+        - use to find files/directories
+        Syntax: locate  <<file_name>>
+        Ex:
+            $> locate test.txt - list of paths(text.txt) in all directories
+
+`Note`: 
+        - if "locate" command does not output any result, then as root run `udatedb`<br/>
+        - make sure you have `mlocate` package installed <br/>
+            to check = `rpm -qa | grep mlocate` <br/>
+            to install = `yum install mlocate` <br/>
