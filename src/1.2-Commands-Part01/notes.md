@@ -4,11 +4,17 @@
 
 > command [options] [arguments]
 
-## Table of Contents
+## Basic commands
 
 |  [`help`](#help)  | [`man`](#man) |  [`who`](#who) | [`whoami`](#whoami) | [`uname`](#uname) |
 [`pwd`](#pwd) | [`basename`](#basename)| [`history`](#history) |  [`ls`](#ls) | [`cd`](#cd) |
-[`touch`](#touch) | [`cp`](#cp) | [`mv`](#mv) | [`mkdir`](#mkdir) | [`rm`](#rm) | [`find`](#find) | [`locate`](#locate) | [`passwd`](#passwd) | [`wildcards`](#wildcards) | [`ln`](#ln) | [`redirections`](#redirections) | [`tee`](#tee) |
+[`touch`](#touch) | [`cp`](#cp) | [`mv`](#mv) | [`mkdir`](#mkdir) | [`rmdir`](#rmdir) | [`rm`](#rm) | [`find`](#find) | [`locate`](#locate) | [`passwd`](#passwd) | [`wildcards`](#wildcards) | [`ln`](#ln) | [`redirections`](#redirections) | [`tee`](#tee) | [`pipe`](#pipe) |
+
+-----
+
+## File Display Commands
+
+|  [`cat`](#cat)  | [`more`](#more) |  [`less`](#less) | [`head`](#head) | [`tail`](#tail) |
 
 -----
 
@@ -141,7 +147,8 @@ it will copy file/directories in source path and to destination path like `copy 
         - you can create a file with same content of file
         - using this command you can copy a file.
             Ex: 
-                $> cp test.txt test-temp.txt 
+                $> cp helloworld.txt /tmp
+                $> cp helloworld.txt helloworldcp.txt
 
         - To copy folders you need to add the -R
             Ex:
@@ -149,7 +156,8 @@ it will copy file/directories in source path and to destination path like `copy 
 
 ## mv
 
-it will delete file/directories in source path and move to destination path like `cut and paste`
+    -  rename if its in same lcoation. move if its different location
+    - it will delete file/directories in source path and move to destination path like `cut and paste`
 
     >
 
@@ -171,9 +179,20 @@ it will delete file/directories in source path and move to destination path like
                 $> mkdir fruits/banana - create create banana inside fruits folders. so no need to goto fruits folder and use mkdir
                 $> mkdir ~/fruits - will create folder in user home directory as mentioned
 
+## rmdir
+
+    >
+        - To delete multiple folder(s) but the folder you delete must be empty.
+           Ex:
+                $> rmdir fruits cars - which deletes fruits cars folders
+
 ## rm
 
     >
+        - To delete files or folders with files in them
+           Ex:
+                $> rm -r fruits cars - which deletes files and folders
+                $> rm -rf fruits cars - does not ask for confirmation and it will immediately remove anything you ask it to remove.
 
 ## find
 
@@ -301,3 +320,35 @@ it will delete file/directories in source path and move to destination path like
      Ex:
           $> echo "Hello World1" | tee helloworld.txt - override or create the content
           $> echo "Hello World1" | tee -a helloworld.txt - appends the content
+
+## pipe
+
+>
+    - used by shell to connect output of one command directly to the input of another command
+    - symbol for pipe |
+    Syntax:
+            command1 [arguments] | command2 [arguments]
+
+            Ex:
+                $> ls -ltr /etc | more
+                $> ll /etc | tail -1
+
+## cat
+
+>
+
+## more
+
+>
+
+## less
+
+>
+
+## head
+
+>
+
+## tail
+
+>
