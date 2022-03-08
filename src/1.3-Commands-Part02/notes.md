@@ -6,7 +6,7 @@
 
 ## Table of Contents
 
-| [`shellprompt`](#shellprompt) | [`aliases`](#aliases) | [`env`](#env) | [`fadp`](#fadp)
+| [`shellprompt`](#shellprompt) | [`aliases`](#aliases) | [`env`](#env) | [`chmod`](#chmod)
 
 -----
 
@@ -96,42 +96,51 @@
             Ex:- vi ~/.bash_profile and insert below lines after that run source ~/.bash_profile or . ~/.bash_profile to reload profile
                  export EDITOR = "vi"
 
-## fadp
+## chmod
 
 ### File and Directory Permission
 
->
-        $> ls -l
+    - there are 3 types of permissions
 
+        | Symbol | Permission     |
+        | :---:  | :---:          |
+        |   r    |  read          |
+        |   w    |  write         |
+        |   x    |  execute       |
+    
+    - each permission(rwx) can be controlled at three levels/categories
+
+        | Symbol | Category                             |
+        | :---:  | :---                               |
+        |   u    |  user                                |
+        |   g    |  group                               |
+        |   o    |  other(everyone on the system)       |
+        |   a    |  all                                 |
+    
+    - run below command to get permission of File or Directory
+        Ex:
+
+            $> ls -l
             drwxrwxr-x. 2 iamadmin iamadmin 43 Mar  6 16:43 fruits
             -rw-rw-r--. 1 iamadmin iamadmin  0 Mar  7 21:15 test.txt 
 
-| Symbol | Type           |
-| :---:  | :---:          |
-|   -    |  regular file  |
-|   d    |  directory     |
-|   l    |  symbolic link |
+            | Symbol | Type           |
+            | :---:  | :---:          |
+            |   -    |  regular file  |
+            |   d    |  directory     |
+            |   l    |  symbolic link |
 
-| Symbol | Permission     |
-| :---:  | :---:          |
-|   r    |  read          |
-|   w    |  write         |
-|   x    |  execute       |
+            ![file_directory_per](../../assets/img/file_directory_per.PNG)
+
+### permission on File and Directory            
 
 | Permission | File                                                                    |  Directory                                         |
 | :---       | :---                                                                    |  :---                                              |
 |  Read(r)   |grants the right to read the contents of the file                        |ability to list all the files in the directory      |
 |  Write(w)  |ability to change the contents of the file                               |create new files in the directory                   |
-|  Execute(x)|right to execute them, if they are programs<br />(Files that are not programs should not be given the execute permission.)                           |execute permission allows you to enter the directory|
+|  Execute(x)|right to execute them, if they are programs<br />(Files that are not programs should not be given the execute permission)                                                                            |allows you to enter the directory(cd)               |
 
-| Symbol | Category       |
-| :---:  | :---:          |
-|   u    |  user          |
-|   g    |  group         |
-|   o    |  execute       |
-|   a    |  all           |
-
-![file_directory_per](../../assets/img/file_directory_per.PNG)
+### command to change permission
 
 | Item   | Meaning                          |
 | :---   | :---                             |
