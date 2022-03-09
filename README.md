@@ -4,10 +4,10 @@
 
 ## Table of Contents
 
-- [`1.0. Top 50 commands`](src/top50commands.md)
+- [`1.0. Top 50 commands`](notes/top50commands.md)
 
-- [`1.1. Linux Basics`](src/1.1-Linux-Basics/notes.md)
+- [`1.1. Linux Introduction`](notes/linuxintro.md)
 
-- [`1.2. Commands-Part01`](src/1.2-Commands-Part01/notes.md)
+- [`1.2. Basic Commands`](notes/basiccommands.md)
 
-- [`1.3. Commands-Part02`](src/1.3-Commands-Part02/notes.md)
+- [`1.3. Intermediate Commands`](notes/intermediatecommands.md)

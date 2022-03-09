@@ -1,6 +1,6 @@
-# Linux Basics
+# Linux Introduction
 
-## Table of Contents
+## Index
 
 - [1.1-OperatingSystem](#11-operating-system)
 
