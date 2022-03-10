@@ -12,4 +12,4 @@
 
 - [`1.3. Intermediate Commands`](notes/intermediate.md)
 
-- [`1.4. Networking Commands`](notes/netwworking.md)
+- [`1.4. Networking Commands`](notes/networking.md)
