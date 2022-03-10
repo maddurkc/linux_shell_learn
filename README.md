@@ -8,6 +8,8 @@
 
 - [`1.1. Linux Introduction`](notes/linuxintro.md)
 
-- [`1.2. Basic Commands`](notes/basiccommands.md)
+- [`1.2. Basic Commands`](notes/basic.md)
 
-- [`1.3. Intermediate Commands`](notes/intermediatecommands.md)
+- [`1.3. Intermediate Commands`](notes/intermediate.md)
+
+- [`1.4. Networking Commands`](notes/netwworking.md)
