@@ -8,7 +8,7 @@
 
 |  [`help`](#help)  | [`man`](#man) |  [`who`](#who) | [`whoami`](#whoami) | [`uname`](#uname) |
 [`pwd`](#pwd) | [`basename`](#basename)| [`history`](#history) |  [`ls`](#ls) | [`cd`](#cd) |
-[`touch`](#touch) | [`cp`](#cp) | [`mv`](#mv) | [`mkdir`](#mkdir) | [`rmdir`](#rmdir) | [`rm`](#rm) | [`find`](#find) | [`locate`](#locate) | [`passwd`](#passwd) | [`wildcards`](#wildcards) | [`ln`](#ln) | [`redirections`](#redirections) | [`tee`](#tee) | [`pipe`](#pipe) |
+[`touch`](#touch) | [`cp`](#cp) | [`mv`](#mv) | [`mkdir`](#mkdir) | [`rmdir`](#rmdir) | [`rm`](#rm) | [`find`](#find) | [`locate`](#locate) | [`passwd`](#passwd) | [`wildcards`](#wildcards) | [`ln`](#ln) | [`redirections`](#redirections) | [`tee`](#tee) | [`pipe`](#pipe) | [`diff`](#diff) | [`cmp`](#cmp) |
 
 -----
 
@@ -401,3 +401,16 @@ it will copy file/directories in source path and to destination path like `copy 
 ## tail
 
 >
+
+## diff
+>
+
+-Indicates the changes that are to be done to make the files identical.
+-returns the text of filetwo that is different from filetwo.
+-Directory names can be used
+
+## cmp
+>
+- Byte by byte comparision performed for two files comparision and displays the first mismatch byte.
+- cmp returns the 1st byte and the line no of the fileone to make the changes to make the fileone   identical to filetwo.
+- Directory names can not be used.

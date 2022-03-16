@@ -13,3 +13,5 @@
 - [`1.3. Intermediate Commands`](notes/intermediate.md)
 
 - [`1.4. Networking Commands`](notes/networking.md)
+
+- [`1.5. Disk Management`](notes/diskmgmt.md)

@@ -17,7 +17,6 @@
 * /etc/sysconfig/network-scripts/
 * /etc/resolv.conf
 
-
 ## Network Commands
 
 | [`ping`](#ping) | [`ifconfig`](#ifconfig) | [`ifup`](#ifup) | [`ifdown`](#ifdown) | [`netstat`](#netstat) | [`tcpdump`](#tcpdump) |

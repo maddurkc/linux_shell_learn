@@ -6,7 +6,7 @@
 
 ## Table of Contents
 
-| [`shellprompt`](#shellprompt) | [`aliases`](#aliases) | [`env`](#env) | [`chmod`](#chmod) | [`chown`](#chown) | [`acl`](#acl) |
+| [`shellprompt`](#shellprompt) | [`aliases`](#aliases) | [`printenv`](#printenv) | [`env`](#env) | [`chmod`](#chmod) | [`chown`](#chown) | [`acl`](#acl) |
 
 -----
 
@@ -68,6 +68,18 @@
                 alias lltr="ls -ltr"
                 alias cls="clear"
 
+## printenv
+
+    >  
+        used to print the values of environment variables
+
+        ### Temporary(current running session)
+            - Viwewing environment varible
+                Syntax: printenv [environment varible name]    
+                    Ex:
+                        $> printenv  - displays list of environment varible defined
+                        $> printenv PWD - display value for environment variable PWD
+
 ## env
     >  
         name/value pair
@@ -76,8 +88,7 @@
             - Viwewing environment varible
                 Syntax: printenv [environment varible name]    
                     Ex:
-                        $> env or printenv  - displays list of environment varible defined
-                        $> printenv PWD or echo $PWD - display value for environment variable PWD
+                        $> env   - displays list of environment varible defined
 
             - creating/updating environment varible 
                 Syntax: export <<varible_name>>="<<value>>"
@@ -261,8 +272,3 @@
     - to get more details abt file/directory
         Ex:
             $> getfacl <<path to file>>
-
-
-        
-
-
