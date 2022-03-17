@@ -6,7 +6,7 @@
 
 ## Table of Contents
 
-| [`shellprompt`](#shellprompt) | [`aliases`](#aliases) | [`printenv`](#printenv) | [`env`](#env) | [`chmod`](#chmod) | [`chown`](#chown) | [`acl`](#acl) |
+| [`shellprompt`](#shellprompt) | [`aliases`](#aliases) | [`printenv`](#printenv) | [`env`](#env) | [`chmod`](#chmod) | [`chown`](#chown) | [`acl`](#acl) | [`vi`](#vi) | [`vim`](#vim) |
 
 -----
 
@@ -272,3 +272,61 @@
     - to get more details abt file/directory
         Ex:
             $> getfacl <<path to file>>
+
+## vi
+
+>
+    - visual editor is program which enables you to create and manipulate data(text) in a Linux file
+    
+    - vi supplies commands for:
+        - inserting and deleting text
+        - replacing text
+        - moving around file
+        - finding and substituting strings
+        - cutting and pasting text
+
+### below are most commenly used keys
+
+| Keys    | Purpose |
+| :---:   | :---  |
+| i       |  insert mode |
+| Esc     |  escape out of any mode  |
+| r       |  replace mode  |
+| d(2 times)       |  delete mode  |
+| :q!     |  quit without saving  |
+| :wq!    |  quit and save  |
+| x       |  delete char by char  |
+| u       |  undo changes  |
+| o       |  new line and enter into insert mode  |
+
+## vim
+
+>
+    - vim editor is advanced than vi. much easier to use. extra added features compared to vi
+    
+    - vim features:
+        - completion
+        - spell check
+        - comparision
+        - merging
+        - regex
+        - syntax heighting e.t.c
+    
+    - to practise vim editor please refer 
+            https://www.openvim.com/   
+            http://www.vimgenius.com/   
+            https://vim-adventures.com/
+
+### below are most commenly used keys
+
+| Keys    | Purpose |
+| :---:   | :---  |
+| i       |  insert mode |
+| Esc     |  escape out of any mode  |
+| r       |  replace mode  |
+| d(2 times)       |  delete mode  |
+| :q!     |  quit without saving  |
+| :wq!    |  quit and save  |
+| x       |  delete char by char  |
+| u       |  undo changes  |
+| o       |  new line and enter into insert mode  |
