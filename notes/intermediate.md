@@ -509,7 +509,8 @@
 ## grep
 
 >
-* stands for global regular expression print. processes text line by line and prints any lines which match a specified pattern. 
+* stands for global regular expression print. processes text line by line and prints any lines which match a specified pattern.
+
 
 ## useradd
 
