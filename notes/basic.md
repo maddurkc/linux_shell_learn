@@ -1,4 +1,4 @@
-# Basic Commands - Part01
+# Basic Commands
 
 ## Command Syntax
 

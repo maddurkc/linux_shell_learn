@@ -1,12 +1,20 @@
-# Basic Commands - Part02
-
-## Command Syntax
-
-> command [options] [arguments]
+# Intermediate Commands
 
 ## Table of Contents
 
-| [`shellprompt`](#shellprompt) | [`aliases`](#aliases) | [`printenv`](#printenv) | [`env`](#env) | [`chmod`](#chmod) | [`chown`](#chown) | [`acl`](#acl) | [`vi`](#vi) | [`vim`](#vim) |
+| [`shellprompt`](#shellprompt) | [`aliases`](#aliases) | [`printenv`](#printenv) | [`env`](#env) | [`chmod`](#chmod) | [`chown`](#chown) | [`acl`](#acl) | [`vi`](#vi) | [`vim`](#vim) | [`sed`](#sed) |
+
+## User Account Management - Commands
+
+| [`useradd`](#useradd) | [`groupadd`](#groupadd) | [`userdel`](#userdel) | [`groupdel`](#groupdel) | [`usermod`](#usermod) |
+
+### created user record managed in below files
+
+* /etc/passwd
+![etc_passwd_file](../assets/img/etc_passwd.png)
+* /etc/group
+* /etc/shadow
+* /etc/login.def - file is used to enabling password aging
 
 -----
 
@@ -317,16 +325,110 @@
             http://www.vimgenius.com/   
             https://vim-adventures.com/
 
-### below are most commenly used keys
+## sed
 
-| Keys    | Purpose |
-| :---:   | :---  |
-| i       |  insert mode |
-| Esc     |  escape out of any mode  |
-| r       |  replace mode  |
-| d(2 times)       |  delete mode  |
-| :q!     |  quit without saving  |
-| :wq!    |  quit and save  |
-| x       |  delete char by char  |
-| u       |  undo changes  |
-| o       |  new line and enter into insert mode  |
+* replace s string in a file with a new string
+* find and delete a line
+* remove empty lines
+* remove first or n lines in a file
+* to replace tabs with spaces
+* show defined lines from a file
+* substitute within vi editor and much more...
+
+>
+  Ex:-
+        $> sed 's/abt/about/g' myfirstvimfile
+
+             - s means substitute
+             - abt/about/g -  will substitue abt string to about string in global means all places
+             - this only display the changes in console but it will not do changes in file
+        
+        $> sed -i 's/abt/about/g' myfirstvimfile
+             
+             - -i - it will make changes in file as well.
+
+        $> sed 's/journey//g' myfirstvimfile
+
+             - journey//g -  it will remove journey string(case sensitive)
+
+        $> sed '/about/d' myfirstvimfile
+
+             -  /about/d -  it will remove the lines which contains about string
+
+        $> sed '/^$/d' myfirstvimfile
+
+              - /^$/d -  deletes empty lines
+
+        $> sed '1d' myfirstvimfile
+            
+              - '1d' - delete the first line
+
+        $>  sed '1,2d' myfirstvimfile
+          
+              - '1,2d' -  delete line no 1 and 2 
+
+        $> sed -i 's/\t/  /g' myfirstvimfile
+
+              - s/\t/  /g -  replace tabs with spaces
+              - s/ /\t/g  -  replace spaces with tabs
+
+        $> sed -n 4p myfirstvimfile
+
+              - -n 4p - to display 4th line inside a file
+              - -n 4,8p -  to display 4th to 8th lines inside a file(include)
+
+        $> sed 4,6d myfirstvimfile
+          
+              -  4,6d - displays all lines except from line no 4 to 6.
+
+        $> sed G myfirstvimfile
+
+              -  G - after each and every file it will insert new empty line
+
+        $> sed '4!s/abt/about/' myfirstvimfile
+
+              -  4!s/abt/about/ - will replace abt string with about in all lines which contains abt string except 4th line
+
+        $> in vi editor :%s/abt/about/ - will replace abt with about string in vi editor
+
+## useradd
+
+> used to create the user.
+
+    Ex:- 
+        $> useradd krishna -  it will create user called krishna
+        $> id krishna - to verify weather user created or not. if yes it will return user information like uid,gid and e.t.c
+        $> useradd -g india-org -s /gin/bash -c "user description" -m -d /home/ksuresh sureshk
+
+## groupadd
+
+> used to create group
+
+    Ex:- 
+        $> groupadd india-org -  it will create group called india-org
+        $> cat /etc/group - to verify weather group created or not
+
+## userdel
+
+> used to delete the user
+
+    Ex:-
+        $> userdel -r spiderman - delete the user along with user home directory as well
+
+## groupdel
+
+> used to delete the group
+
+    Ex:- 
+        $> groupdel india-org -  it will delete group called india-org
+        $> cat /etc/group - to verify weather group created or not
+
+## usermod
+
+> useed to modify user account
+
+    Ex:-
+        $> usermod -G india-org krishna -  add krishna to india-org group
+        $> grep krishna /etc/group - to verify abt group info
+        $> chgrp -R india-org /home/krishna - to change user home directory groupname to india-org
+
