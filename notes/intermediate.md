@@ -2,7 +2,7 @@
 
 ## Table of Contents
 
-| [`shellprompt`](#shellprompt) | [`aliases`](#aliases) | [`printenv`](#printenv) | [`env`](#env) | [`chmod`](#chmod) | [`chown`](#chown) | [`acl`](#acl) | [`vi`](#vi) | [`vim`](#vim) | [`sed`](#sed) |
+| [`shellprompt`](#shellprompt) | [`aliases`](#aliases) | [`printenv`](#printenv) | [`env`](#env) | [`chmod`](#chmod) | [`chown`](#chown) | [`acl`](#acl) | [`vi`](#vi) | [`vim`](#vim) | [`sed`](#sed) | [`systemctl`](#systemctl) | [`ps`](#ps) | [`top`](#top) | [`kill`](#kill) |
 
 ## User Account Management - Commands
 
@@ -11,7 +11,9 @@
 ### created user record managed in below files
 
 * /etc/passwd
+
 ![etc_passwd_file](../assets/img/etc_passwd.png)
+
 * /etc/group
 * /etc/shadow
 * /etc/login.def - file is used to enabling password aging
@@ -391,6 +393,99 @@
 
         $> in vi editor :%s/abt/about/ - will replace abt with about string in vi editor
 
+## systemctl
+
+>
+
+* used to control system services
+
+`Syntax:-`
+    systemctl  start|stop|status  servicename.service -  to start/stop the service or to check the status of the service
+    systemctl enable|disable servicename.service - to enable/disable service to start at boot time
+    systemctl restart/reload servicename.service - to restart/reload the service when configuration changes
+    systemctl list-units --all -  to display all active/inactive list of services. remove --all to see only active services
+
+    Ex:-
+
+       $> systemctl status firewalld.service -  to check the firewalld service status.
+
+* to add service(3rd party) under systemctl management
+
+  create a unit file in /etc/systemd/system/servicename.service
+
+* control system systemctl
+
+   systemctl poweroff
+   systemctl halt
+   systemctl reboot
+
+## ps
+
+>
+  stands for process status and it displays all the currently running processes in the linux system
+
+  Ex:-
+        $> ps - shows the processes of the current shell
+          O/P:
+                PID - the unique process id
+                TTY - terminal type that the user logged-in to
+                TIME - amount of CPU in mins and seconds that the process has beeen running
+                CMD - name of the command
+
+        $> ps -e - shows all running processes
+        $> ps aux = shows all running processes in BSD format. 
+        $> ps -ef = shows all running process in full format listing (widely used command)
+        $> ps -u <<username>> - shows all processes by username
+
+## top
+
+>
+* top command is used to show the linux processes and it provides a realtime view of the running system
+* shows the summary informtion of the system and list of processes/threads which are currently managed by the linux kernel
+* it goes into interactive mode and hitting q to exit
+
+   Ex:-
+
+        $> top
+        $> top -u <<username>> =  shows tasks/processes owned by username
+        $> top then press c = shows command absolute path of the command
+        $> top then press k = kill the process by PID within top session
+        $> top then M and p = to sort all processes by memory usage
+
+`Note:-`
+        - top command refreshes the information every 3 seconds by default
+
+## kill
+
+>
+* kill command is used to terminate processes manually
+* it sends a singnal which ultimately terminates or kills a perticular process or group of processes
+
+`Syntax:-`
+
+      kill [OPTION] [PID]
+
+      OPTION = singnal name or singnal number/ID
+      PID = process Id
+
+      Ex:-
+            $> kill -l = to get a list nof signal names/numbers
+
+### Most used signals
+
+| Singnals    | Purpose |
+| :---        | :---  |
+| kill PID    |  kill process with default signal |
+| kill -1     |  restart  |
+| kill -2     |  interrupt from the keyboard just like Ctrl+C  |
+| kill -9     |  forcefully kill the process  |
+| kill -15    |  kill a process gracefully  |
+
+* Other similar kill commands
+
+    killall - kill all the process and its related child processes.
+    pkill - kill by the process name.
+
 ## useradd
 
 > used to create the user.
@@ -431,4 +526,3 @@
         $> usermod -G india-org krishna -  add krishna to india-org group
         $> grep krishna /etc/group - to verify abt group info
         $> chgrp -R india-org /home/krishna - to change user home directory groupname to india-org
-
