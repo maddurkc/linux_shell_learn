@@ -483,7 +483,7 @@
 
 * Other similar kill commands
 
-    killall - kill all the process and its related child processes.
+    killall - kill all the process and its related child processes.<br/>
     pkill - kill by the process name.
 
 ## useradd
