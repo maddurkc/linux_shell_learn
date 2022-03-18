@@ -2,8 +2,7 @@
 
 ## Table of Contents
 
-|  [`cut`](#cut)  |  [`awk`](#awk)  |  [`grep/egrep`](#grep)  |  [`sort`](#sort)  |  [`uniq`](#uniq)  |
-|  [`wc`](#wc)
+|  [`cut`](#cut)  |  [`awk`](#awk)  |  [`grep/egrep`](#grep)  |  [`sort/unique`](#sortunique)  |  [`wc`](#wc)
 
 ----
 
@@ -118,3 +117,55 @@
             $> egrep -i "<<keyword1>>|<<keyword2>>" <<file>> = search one or more keywords
 
                   Ex:-  egrep -i "journey|to" text_search.txt
+
+## sortunique
+
+> **sort** command sorts alphabetical order
+>
+> **uniq** command filters out the repeated or duplicate lines
+
+<ins>***Examples Sort:-***</ins>
+
+* sort --version or sort --help or man sort
+
+* sort <<file_name>> = **sort based on 1st col,1st char content of charecter alphabetical order(A-Z/a-z)**
+    >
+    Ex:-
+        $> sort text_search.txt
+
+* sort -r <<file_name>> = **sort content of charecter reverse order**
+    >
+    Ex:-
+        $> sort -r text_search.txt
+
+* sort -k2 <<file_name>> = **sort based on 2ndcol,1st char**
+    >
+    Ex:-
+        $> sort -k2 text_search.txt
+
+* sort -k2 <<file_name>> = **sort based on 2ndcol,1st char**
+    >
+    Ex:-
+        $> sort -k2 text_search.txt
+
+<ins>***Examples Uniq:-***</ins>
+
+> ***Note:-***
+> ***always need to use sort command before using uniq command***
+
+* sort <<file_name>> | uniq  = **sort the file content and removes duplicates lines**
+    >
+    Ex:-
+        $> sort text_search.txt | uniq
+
+* sort <<file_name>> | uniq  -c = **sort first then uniq and list count repeated times reach line**
+    >
+    Ex:-
+        $> sort text_search.txt | uniq -c
+
+* sort <<file_name>> | uniq  -d = **show only repeated lines** or **show only repeated lines and count**
+    >
+    Ex:-
+        $> sort text_search.txt | uniq -d or sort text_search.txt | uniq -dc
+
+* Ex:- ls -l | awk '{print $8}' | sort | uniq -c
