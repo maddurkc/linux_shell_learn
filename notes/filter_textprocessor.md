@@ -55,12 +55,12 @@
 * cut -d: -f 6-7 <<file_name>> = **list 6th&7th field separated by   ***':'*****
     >
     Ex:-
-        $> cut -d: -f 6-7 /etc/passwd = **all users home dir . becoz 6th field is user home dir**
+        $> cut -d: -f 6-7 /etc/passwd
 
-* ls -l | cut -c2-4 = print user permission of files/dir
+* ls -l | cut -c2-4 = **print user permission of files/dir**
     >
     Ex:-
-        $> cut -d: -f 6-7 /etc/passwd = **all users home dir . becoz 6th field is user home dir**
+        $> ls -l | cut -c2-4
 
 ## awk
 
@@ -79,3 +79,42 @@
 * $> awk 'length($0)>20' awk_lab.txt = get lines that have morethan 20 byte size
 * $> ls -l | awk '{if($9 == 'awk_lab.txt'); print $0}' - get the field matching awk_lab.txt in pwd
 * $> ls -l | awk '{print NF}' or awk '{print NF}' awk_lab.txt - no of fields
+
+## grep
+
+> stands for global regular expression print. processes text line by line and prints any lines which match a specified pattern.
+
+       Ex:-
+            $> grep --version or grep --help
+            
+            $> grep <<keyword>> <<file>>    = search for a keyword from a file
+                  
+                  Ex:- grep Journey text_search.txt = shows the lines from a file which contains Journey word. 
+                       grep mkc /etc/passwd
+            
+            $> grep -c <<keyword>> <<file>> = search for a keyword and display count
+                  
+                  Ex:- grep -c learning text_search.txt  
+            
+            $> grep -i <<keyword>> <<file>> = search for keyword ignore case-sensitive
+                  
+                  Ex:- grep -i journey text_search.txt
+            
+            $> grep -n <<keyword>> <<file>> = displays matched lines and their line no's.
+                  
+                  Ex:- grep -n journey text_search.txt
+                       grep -in journey text_search.txt
+
+            $> grep -v <<keyword>> <<file>> = displays every thing except macthed keyword lines
+                  
+                  Ex:- grep -v journey text_search.txt
+
+            $> grep <<keyword>> <<file>> | awk '{print $1}'= search for keyword and then retun 1st field
+                  
+                  Ex:- grep journey text_search.txt | awk '{print $1}'
+
+            $> ls -l | grep Desktop  = search for keyword on 1st command output
+
+            $> egrep -i "<<keyword1>>|<<keyword2>>" <<file>> = search one or more keywords
+
+                  Ex:-  egrep -i "journey|to" text_search.txt

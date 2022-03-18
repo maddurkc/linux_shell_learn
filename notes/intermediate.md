@@ -2,8 +2,7 @@
 
 ## Table of Contents
 
-| [`shellprompt`](#shellprompt) | [`aliases`](#aliases) | [`printenv`](#printenv) | [`env`](#env) | [`chmod`](#chmod) | [`chown`](#chown) | [`acl`](#acl) | [`vi`](#vi) | [`vim`](#vim) | [`sed`](#sed) |  [`systemctl`](#systemctl) | [`ps`](#ps) | [`top`](#top) |
-[`kill`](#kill) [`grep`](#grep) |
+| [`shellprompt`](#shellprompt) | [`aliases`](#aliases) | [`printenv`](#printenv) | [`env`](#env) | [`chmod`](#chmod) | [`chown`](#chown) | [`acl`](#acl) | [`vi`](#vi) | [`vim`](#vim) | [`sed`](#sed) |  [`systemctl`](#systemctl) | [`ps`](#ps) | [`top`](#top) | [`kill`](#kill)
 
 ## User Account Management - Commands
 
@@ -486,46 +485,6 @@
 
     killall - kill all the process and its related child processes.<br/>
     pkill - kill by the process name.
-
-## grep
-
->
-* stands for global regular expression print. processes text line by line and prints any lines which match a specified pattern.
-
-       Ex:-
-            $> grep --version or grep --help
-            
-            $> grep <<keyword>> <<file>>    = search for a keyword from a file
-                  
-                  Ex:- grep Journey text_search.txt = shows the lines from a file which contains Journey word. 
-                       grep mkc /etc/passwd
-            
-            $> grep -c <<keyword>> <<file>> = search for a keyword and display count
-                  
-                  Ex:- grep -c learning text_search.txt  
-            
-            $> grep -i <<keyword>> <<file>> = search for keyword ignore case-sensitive
-                  
-                  Ex:- grep -i journey text_search.txt
-            
-            $> grep -n <<keyword>> <<file>> = displays matched lines and their line no's.
-                  
-                  Ex:- grep -n journey text_search.txt
-                       grep -in journey text_search.txt
-
-            $> grep -v <<keyword>> <<file>> = displays every thing except macthed keyword lines
-                  
-                  Ex:- grep -v journey text_search.txt
-
-            $> grep <<keyword>> <<file>> | awk '{print $1}'= search for keyword and then retun 1st field
-                  
-                  Ex:- grep journey text_search.txt | awk '{print $1}'
-
-            $> ls -l | grep Desktop  = search for keyword on 1st command output
-
-            $> egrep -i "<<keyword1>>|<<keyword2>>" <<file>> = search one or more keywords
-
-                  Ex:-  egrep -i "journey|to" text_search.txt
 
 ## useradd
 
