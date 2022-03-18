@@ -50,7 +50,7 @@
 > **more** command will displays the file content one page at a time in case the file is large (For example log files)
 >
 > **more** command also allows the user do scroll up and down through the page.
->
+
 > ###  While viewing the text file use these controls
 
 | Key    | Meaning                              |
@@ -59,7 +59,7 @@
 | Space  |  to go to next page                  |
 |  b     |  to go to the backward page          |
 |  /     |  lets you search the string          |
->
+
 > ### more options
 
 | Options            | Function                                             |
