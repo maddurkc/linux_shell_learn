@@ -168,4 +168,52 @@
     Ex:-
         $> sort text_search.txt | uniq -d or sort text_search.txt | uniq -dc
 
-* Ex:- ls -l | awk '{print $8}' | sort | uniq -c
+* Ex:- ls -l | awk ' NR>1 {print $8}' | sort | uniq -c
+
+## wc
+
+> reads either standard input or alist of files and generate: **newline count, word count and btye count**
+
+![wc_file](../assets/img/wc.png)
+
+> ***Note:-***
+> ***wc command will not work on directories and it will not print no information abt directory***
+
+<ins>***Examples:-***</ins>
+
+* wc --version or sort --help or man sort
+
+* wc <<file_name>> = **displays word count information of file**
+    >
+    Ex:-
+        $> wc text_search.txt
+
+* wc -l <<file_name>> = **# of lines in a file**
+    >
+    Ex:-
+        $> wc -l  text_search.txt
+
+* wc -w <<file_name>> = **# of words in a file**
+    >
+    Ex:-
+        $> wc -w  text_search.txt
+
+* wc -c <<file_name>> = **# of bytes in a file**
+    >
+    Ex:-
+        $> wc -c  text_search.txt
+
+* wc -m <<file_name>> = **# of chars in a file**
+    >
+    Ex:-
+        $> wc -m  text_search.txt
+
+* ls -l | wc -l  = **print # of files from ls -l output**
+    >
+    Ex:-
+        $> ls -l | wc -l
+
+* grep <<key_word>> <<file_name>> | wc -l  = **print matched keyword # of lines**
+    >
+    Ex:-
+        $> grep learning text_search.txt | wc -l

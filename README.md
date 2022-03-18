@@ -14,6 +14,8 @@
 
 - [`1.3. Filters/Text Processors Commands`](notes/filter_textprocessor.md)
 
+- [`1.3. File Display Commands`](notes/file_display.md)
+
 - [`1.4. Networking Commands`](notes/networking.md)
 
 - [`1.5. Disk Management`](notes/diskmgmt.md)
