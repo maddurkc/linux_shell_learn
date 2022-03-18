@@ -51,7 +51,7 @@
 >
 > **more** command also allows the user do scroll up and down through the page.
 
-> ###  While viewing the text file use these controls
+<ins>***While viewing the text file use these controls:***</ins>
 
 | Key    | Meaning                              |
 | :---:  | :---                                 |
@@ -60,7 +60,7 @@
 |  b     |  to go to the backward page          |
 |  /     |  lets you search the string          |
 
-> ### more options
+<ins>***more options:***</ins>
 
 | Options            | Function                                             |
 | :---               | :---                                                 |
