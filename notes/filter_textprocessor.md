@@ -47,15 +47,15 @@
     Ex:-
         $> cut -c1-3,5-9 text_search.txt
 
-* cut -d: -f 6 <<file_name>> = **list 6th field separated by**:***:*****
+* cut -d: -f 6 <<file_name>> = **list 6th field separated by  ***':'*****
     >
     Ex:-
         $> cut -d: -f 6 /etc/passwd = all users home dir . becoz 6th field is user home dir
 
-* cut -d: -f 6-7 <<file_name>> = **list 6th&7th field separated by ***:*****
+* cut -d: -f 6-7 <<file_name>> = **list 6th&7th field separated by   ***':'*****
     >
     Ex:-
-        $> cut -d: -f 6-7 /etc/passwd = **all users home dir . becoz 6th field is user home dir
+        $> cut -d: -f 6-7 /etc/passwd = **all users home dir . becoz 6th field is user home dir**
 
 * ls -l | cut -c2-4 = print user permission of files/dir
     >
