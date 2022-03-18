@@ -2,7 +2,7 @@
 
 ## Table of Contents
 
-| [`shellprompt`](#shellprompt) | [`aliases`](#aliases) | [`printenv`](#printenv) | [`env`](#env) | [`chmod`](#chmod) | [`chown`](#chown) | [`acl`](#acl) | [`vi`](#vi) | [`vim`](#vim) | [`sed`](#sed) | [`awk`](#awk) | [`systemctl`](#systemctl) | [`ps`](#ps) | [`top`](#top) |
+| [`shellprompt`](#shellprompt) | [`aliases`](#aliases) | [`printenv`](#printenv) | [`env`](#env) | [`chmod`](#chmod) | [`chown`](#chown) | [`acl`](#acl) | [`vi`](#vi) | [`vim`](#vim) | [`sed`](#sed) |  [`systemctl`](#systemctl) | [`ps`](#ps) | [`top`](#top) |
 [`kill`](#kill) [`grep`](#grep) |
 
 ## User Account Management - Commands
@@ -393,25 +393,6 @@
               -  4!s/abt/about/ - will replace abt string with about in all lines which contains abt string except 4th line
 
         $> in vi editor :%s/abt/about/ - will replace abt with about string in vi editor
-
-## awk
-
->
-
-* awk is utility designed for data extraction.
-
-    Ex:-
-        $> awk --version   =   to check awk version
-        $> awk "{print $1}" awk_lab.txt =  gives only 1st field columns data
-        $> ls -l | awk '{print $1,$3}'   = list 1st and 3rd fileds of ls -l output
-        $> ls -l | awk '{print $NF}'   = last filed of ls -l output
-        $> awk '/Krishna/ {print}' awk_lab.txt (or) awk '/2022/ {print}' awk_lab.txt =  search for a specific word
-        $> awk -F: '{print $1}' /etc/passwd = output only 1st field of /etc/passwd (delimiter : or split by : and give 1st field)
-        $> echo "Hello World" | awk '{$2="krishna"; print $0}' = replace words field words
-        $> awk '{$2="Maddur"; print $0}' awk_lab.txt =  same as above
-        $> awk 'length($0)>20' awk_lab.txt = get lines that have morethan 20 byte size
-        $> ls -l | awk '{if($9 == 'awk_lab.txt'); print $0}' - get the field matching awk_lab.txt in pwd
-        $> ls -l | awk '{print NF}' or awk '{print NF}' awk_lab.txt - no of fields
 
 ## systemctl
 
