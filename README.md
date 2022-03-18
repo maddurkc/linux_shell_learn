@@ -19,3 +19,4 @@
 - [`1.4. Networking Commands`](notes/networking.md)
 
 - [`1.5. Disk Management`](notes/diskmgmt.md)
+- [`1.5. Logical Volume Manager`](notes/lvm.md)
